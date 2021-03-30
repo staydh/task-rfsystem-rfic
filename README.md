@@ -1,10 +1,13 @@
 # task-rfsystem
+
 Primeira tarefa da disciplina PSC0043 - Tópicos Especiais em Comunicação I (Circuitos Integrados para Comunicação)
 
 ## Definição da tarefa
+
 Elaborar programa para análise em cascata de sistemas de RF: *system budget* e *link budget*
 
 *Guidelines*:
+
 1. Utilizar *python* (.py ou .ipynb), *octave* ou *C/C++*;
 2. Utilizar abordagem de modo que o programa possa ser atualizado e interfaceado em tarefas futuras;
 3. Definir como entradas, no mínimo: quantidade de sistemas de RF (receptor, transmissor e link); blocos de RF (em cada sistema), ganhos/perdas de cada bloco;
@@ -24,11 +27,30 @@ Elaborar programa para análise em cascata de sistemas de RF: *system budget* e 
 
 ## Prazos máximos
 
-    - Commit de versão inicial: 29/03 (*sources* e descrição inicial)
-    - Commit de versão intermediária: 31/03 (*sources*, descrição incluíndo a demonstração)
-    - Prazo para issues/pull requests: 02/04
-    - Commit de versão final: 05/04 (*sources* finais e descrição completa)
-
+- Commit de versão inicial: 29/03 (*sources* e descrição inicial)
+- Commit de versão intermediária: 31/03 (*sources*, descrição incluíndo a demonstração)
+- Prazo para issues/pull requests: 02/04
+- Commit de versão final: 05/04 (*sources* finais e descrição completa)
 ## Inicio da organização
 
-<Espaço para descrição>
+### RF Analyzer
+
+This project is about a python radio frequency budget analysis package.
+
+
+#### Architecture
+
+The package is organized by entities and services. Each entity represents a block of a radio frequency system (Antenna, Amplifier, ...). Each service is a class with its especific static execute method that make operations related with an entity like calculate gain of a system, link losses and so on.
+
+
+#### Usage
+
+You should instantiate a system and provide a list of blocks to it. With a system, you can use the services class to do budget analysis.
+
+
+##### To do List:
+
+1. ~~Calculate link loss of a system~~;
+2. Organize system structure.
+3. Implement units classes and conversions services.
+4. Create a analyzer class that provide to the user analysis options.

@@ -1,6 +1,4 @@
-from sources.Entities.RFSystem import RFSystem
 from sources.Entities.Amplifier import Amplifier
-from sources.Entities.Transmitter import Transmitter
 from sources.Entities.Antenna import Antenna
 from sources.Entities.Link import Link
 from sources.Services.GetLinkLossService import GetLinkLossService
