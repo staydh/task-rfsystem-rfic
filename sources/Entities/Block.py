@@ -8,4 +8,4 @@ class Block:
 
     @property
     def gain_in_dbm(self):
-        return 10 * np.log(self.gain / 1e-3)
+        return 10 * np.log10(self.gain / 1e-3)

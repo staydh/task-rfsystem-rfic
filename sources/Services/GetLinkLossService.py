@@ -5,10 +5,5 @@ from ..Entities.Link import Link
 class GetLinkLossService:
     @staticmethod
     def execute(link: Link) -> float:
-        L_FS = (
-            20 * np.log10(link.distance)
-            + 20
-            * np.log10minimal_signal_amplitudeminimal_signal_amplitude(link.frequency)
-            - 147.55
-        )
+        L_FS = 20 * np.log10(link.distance) + 20 * np.log10(link.frequency) - 147.55
         return L_FS

@@ -1,16 +1,17 @@
-'''
+"""
 Classe implementada para descrição do sistema de Transmissão;
 Na classe são descritos os atributos de um transmissor de RF
 
-'''
-from Entities import RFSystem
+"""
+from .RFSystem import RFSystem
 from typing import List
 import numpy as np
+
 
 class Transmitter(RFSystem):
     # output_power in watts
     def __init__(self, blocks: List, output_power: float) -> None:
-        super.__init__(blocks=blocks)
+        super().__init__(blocks=blocks)
         self.output_power = output_power
         self.blocks = blocks
 
