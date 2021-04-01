@@ -35,16 +35,13 @@ receiver_sensitivity = (
     - propagation_losses
     + receiver_antenna_gain.value
 )
-print(f"Amplifier power {transmitter_amplifier_output.gain}")
-print(f"RX input sensitivity: {receiver_sensitivity}")
+
 
 # Part 3
 input_tx_voltage = Volt(value=20)
 input_tx_voltage_in_dBm = input_tx_voltage.value_in_dBm()
-print(f"TX input is {input_tx_voltage_in_dBm}")
 output_tx_power = Watt(value=10e3)
 output_tx_power_in_dBm = output_tx_power.value_in_dBm()
-print(f"TX output is {output_tx_power_in_dBm}")
 
 transmitter = Transmitter(
     blocks=[
@@ -72,4 +69,17 @@ receiver = Receiver(
 
 output_rx_voltage = Volt(value=50e-3)
 output_rx_in_dBm = output_rx_voltage.value_in_dBm()
-print(f"Output from RX is {output_rx_in_dBm}")
+
+# Parte 4
+
+print("\nDados do transmissor")
+print(f"Entrada: {input_tx_voltage_in_dBm.value:.3f}dBm")
+for index, block in enumerate(transmitter.blocks):
+    print(f"bloco {index} ({type(block).__name__}): {block.gain-block.loss}dBm")
+print(f"Saída: {output_tx_power_in_dBm}")
+
+print("\nDados do receptor")
+print(f"Entrada: {receiver_sensitivity:.3f}dBm")
+for index, block in enumerate(receiver.blocks):
+    print(f"block {index} ({type(block).__name__}): {block.gain-block.loss}dBm")
+print(f"Saída: {output_rx_in_dBm.value:.3f}dBm")
