@@ -40,17 +40,29 @@ This project is about a python radio frequency budget analysis package.
 
 #### Architecture
 
-The package is organized by entities and services. Each entity represents a block of a radio frequency system (Antenna, Amplifier, ...). Each service is a class with its especific static execute method that make operations related with an entity like calculate gain of a system, link losses and so on.
+In general the package is organized by entities and services. Each entity represents a block of a radio frequency system (Antenna, Amplifier, ...). Each service is a class with its especific static execute method that make operations related with an entity like calculate gain of a system, link losses and so on.
 
 
 #### Usage
 
 You should instantiate a system and provide a list of blocks to it. With a system, you can use the services class to do budget analysis.
 
+### Behavior
+
+
+### Variables
+
+
+### Entities
+
+### Service
+
+### Units
+
 
 ##### To do List:
 
-1. ~~Calculate link loss of a system~~;
+1. ~~Calculate link loss of a system;
 2. Organize system structure.
 3. Implement units classes and conversions services.
 4. Create a analyzer class that provide to the user analysis options.
