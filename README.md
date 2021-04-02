@@ -82,6 +82,18 @@ Output in getRFSystemGainService (Service folder):
 * System Gain (dB). 
    
 ### Entities
+* Amplifier;
+* AnalogDigitalConvert;
+* Analyser;
+* Antenna;
+* Block;
+* DigitalAnalogConverter;
+* Filter;
+* Link;
+* Mixer;
+* Receiver;
+* RFSystem;
+* Transmitter.
 
 ### Service
 The services folder should be used for entities methods purposes (accordingly to S.O.L.I.D. principles).
