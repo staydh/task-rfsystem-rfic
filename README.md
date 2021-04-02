@@ -56,13 +56,30 @@ This project
 ### Entities
 
 ### Service
+The services folder should be used for entities methods purposes (accordingly to S.O.L.I.D. principles).
 
 ### Units
+The units should be used as a entity parameter for physical quantities. Each entity will have your  unity inside your own constructor.
 
+Units implemented:
 
-##### To do List:
+* Ampere;
+* dBm;
+* Ohm;
+* Unit (Parent);
+* Volt;
+* Watt.
 
-1. ~~Calculate link loss of a system;
-2. Organize system structure.
-3. Implement units classes and conversions services.
-4. Create a analyzer class that provide to the user analysis options.
+### Example
+
+The test.py file in the root of this repository has a implemmentation example.
+
+```py
+[9:03 PM, 4/1/2021] +55 84 9950-4859: ```python
+[9:03 PM, 4/1/2021] +55 84 9950-4859: distance = 70e3 # m
+frequency = 95.7e6 # Hz
+
+link = Link(distance=distance, frequency=frequency)
+propagation_losses = GetLinkLossService.execute(link=link)
+print(f"Propagation Loss: {propagation_losses} dBm")
+''' 
