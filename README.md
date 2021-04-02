@@ -54,8 +54,8 @@ This project performs calculations of gain and loss on a RF system. For the solu
 ### Variables
 Input Variables list in Block class:
 
-    * gain;
-    * loss.
+* gain;
+* loss.
  Input Variables list in RFSystem class: 
     * blocks.
  Input Variables list in Transmitter class: 
