@@ -48,7 +48,8 @@ In general the package is organized by entities and services. Each entity repres
 You should instantiate a system and provide a list of blocks to it. With a system, you can use the services class to do budget analysis.
 
 ### Behavior
-This project 
+This project performs calculations of gain and loss on a RF system. For the solution of the proposed problem [exercício](ex1.pdf), the system was divided into Entities and Service. The Entities implement *Block* class, whose input parameter are gain and loss. The classes derived from Block class, form each RF system class (Transmitter, receiver and link). In the system class a block list must be passed as a parameter. So, gain and losses of the system are calculated. In Service, the methods are implemented to obtain link loss and system gain. The file in the Unit folder implement conversions and descriptions of the units. Lastly, the file [teste](test.py) describe step by step for solution of the proposed problem, from the codes make. 
+
 
 ### Variables
 
@@ -75,11 +76,11 @@ Units implemented:
 The test.py file in the root of this repository has a implemmentation example.
 
 ```py
-[9:03 PM, 4/1/2021] +55 84 9950-4859: ```python
-[9:03 PM, 4/1/2021] +55 84 9950-4859: distance = 70e3 # m
+```python
+distance = 70e3 # m
 frequency = 95.7e6 # Hz
 
 link = Link(distance=distance, frequency=frequency)
 propagation_losses = GetLinkLossService.execute(link=link)
 print(f"Propagation Loss: {propagation_losses} dBm")
-''' 
+ 
