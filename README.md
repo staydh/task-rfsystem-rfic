@@ -53,28 +53,33 @@ This project performs calculations of gain and loss on a RF system. For the solu
 
 ### Variables
 Input Variables list in Block class:
-
 * gain;
 * loss.
- Input Variables list in RFSystem class: 
-    * blocks.
- Input Variables list in Transmitter class: 
-    * blocks list;
-    * power output (Watts).
- Input Variables list in Transmitter class: 
-    * blocks list;
-    * Sensitivity (dB).
- Input Variables list in Link class: 
-    * Distance (m);
-    * frequency (Hz). 
- Input in GetLinkLossService (Service folder):
-    * class link;
- Output in GetLinkLossService (Service folder):
-    * Loss Free Space (dB). 
- Input in getRFSystemGainService (Service folder):
-    * class RfSystem;
- Output in getRFSystemGainService (Service folder):
-    * System Gain (dB). 
+
+Input Variables list in RFSystem class: 
+blocks.
+
+Input Variables list in Transmitter class: 
+* blocks list;
+* power output (Watts).
+
+Input Variables list in Transmitter class: 
+* blocks list;
+* Sensitivity (dB).
+
+Input Variables list in Link class: 
+* Distance (m);
+* frequency (Hz). 
+
+Input in GetLinkLossService (Service folder):
+* class link;
+Output in GetLinkLossService (Service folder):
+* Loss Free Space (dB). 
+
+Input in getRFSystemGainService (Service folder):
+* class RfSystem;
+Output in getRFSystemGainService (Service folder):
+* System Gain (dB). 
    
 ### Entities
 
