@@ -57,7 +57,7 @@ Input Variables list in Block class:
 * loss.
 
 Input Variables list in RFSystem class: 
-blocks.
+* blocks.
 
 Input Variables list in Transmitter class: 
 * blocks list;
