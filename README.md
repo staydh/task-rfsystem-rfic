@@ -142,12 +142,12 @@ To install the dependencies of this project, you can use a virtual environment a
 #### optional
 
 ```zsh
-    python3 -m venv venv
-    source venv/bin/activate
+    task-rfsystem-rfic (main) ✔ python3 -m venv venv
+    task-rfsystem-rfic (main) ✔ source venv/bin/activate
 ```
 
 #### Installing requirements
 
 ```zsh
-    pip3 install -r requirements.txt
+    (venv) ➜ task-rfsystem-rfic (main) ✔ pip3 install -r requirements.txt
 ```
