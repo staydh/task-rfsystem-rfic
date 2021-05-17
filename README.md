@@ -125,7 +125,7 @@ Units implemented:
 
 The test.py file in the root of this repository has a implemmentation example.
 
-````py
+```py
 distance = 70e3 # m
 frequency = 95.7e6 # Hz
 
@@ -133,15 +133,21 @@ link = Link(distance=distance, frequency=frequency)
 propagation_losses = GetLinkLossService.execute(link=link)
 print(f"Propagation Loss: {propagation_losses} dBm")
 
+```
+
 ### Dependencies
+
 To install the dependencies of this project, you can use a virtual environment and install the requirements in the requirements.txt file
 
 #### optional
-```shell
+
+```zsh
     python3 -m venv venv
     source venv/bin/activate
 ```
+
 #### Installing requirements
-```shell
+
+```zsh
     pip3 install -r requirements.txt
-````
+```
